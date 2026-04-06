@@ -16,7 +16,6 @@ export const ClinicUpdateSchema = Yup.object({
 
   status: Yup.string(),
   addAccount: Yup.object({
-    teleMoney: Yup.string(),
     orangeMoney: Yup.string(),
   }),
   availableDayAndTime: Yup.array().of(
