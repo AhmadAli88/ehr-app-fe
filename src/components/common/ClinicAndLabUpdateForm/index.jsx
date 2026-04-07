@@ -151,6 +151,7 @@ const createClinicUpdateSchema = ({
     status: Yup.string(),
     addAccount: Yup.object({
       orangeMoney: Yup.string().optional(),
+      merchantCode: Yup.string().optional(),
     }),
     availableDayAndTime: Yup.array().of(
       Yup.object({
@@ -172,7 +173,7 @@ const convertTo12HourFormat = (time24) => {
 };
 
 const parseAddAccount = (addAccount) => {
-  if (!addAccount) return { orangeMoney: "" };
+  if (!addAccount) return { orangeMoney: "", merchantCode: "" };
 
   try {
     const parsed =
@@ -180,9 +181,10 @@ const parseAddAccount = (addAccount) => {
 
     return {
       orangeMoney: parsed?.orangeMoney || "",
+      merchantCode: parsed?.merchantCode || "",
     };
   } catch {
-    return { orangeMoney: "" };
+    return { orangeMoney: "", merchantCode: "" };
   }
 };
 
@@ -275,6 +277,7 @@ const ClinicAndLabUpdateForm = ({
     RCCMNIFNumber: initialData.RCCMNIFNumber || initialData.RCCMIFNumber || "",
     addAccount: {
       orangeMoney: normalizedAddAccount.orangeMoney,
+      merchantCode: normalizedAddAccount.merchantCode,
     },
     phoneNumber: initialData.phoneNumber || "",
     longitude: initialData.location?.coordinates?.[0] || "",
@@ -355,6 +358,10 @@ const ClinicAndLabUpdateForm = ({
         formData.append(
           "addAccount[orangeMoney]",
           values.addAccount.orangeMoney || "",
+        );
+        formData.append(
+          "addAccount[merchantCode]",
+          values.addAccount.merchantCode || "",
         );
       }
 
@@ -868,12 +875,20 @@ const ClinicAndLabUpdateForm = ({
 
           <div className="space-y-3">
             <h3 className="text-sm font-semibold text-gray-700">Add Account</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
                 label="Orange Money"
                 name="addAccount.orangeMoney"
                 placeholder="Orange Money account number"
                 value={values.addAccount.orangeMoney}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <Input
+                label="Merchant Code"
+                name="addAccount.merchantCode"
+                placeholder="Enter merchant code"
+                value={values.addAccount.merchantCode}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />

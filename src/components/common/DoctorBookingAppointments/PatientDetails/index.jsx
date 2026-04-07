@@ -150,17 +150,35 @@ export default function PatientDetails({ isClinic = false }) {
     }
   };
   const handleClaimRequest = async () => {
-    const payload = {
-      appointmentId: confirmationData.appointmentData?._id,
-      doctorId: confirmationData?.appointmentData?.doctorId?._id,
-      paymentMethod: "orangeMoney",
-      amountPaid: confirmationData?.appointmentData?.doctorId?.consultationFee,
-      userId: confirmationData?.appointmentData?.userId,
-      accountName: "orangeMoney",
-      accountNo: accountNumber,
-      customerMsisdn: "72906251",
-      actionType: "consultation",
-    };
+    let payload;
+    if (isClinic === false) {
+      payload = {
+        appointmentId: confirmationData.appointmentData?._id,
+        doctorId: confirmationData?.appointmentData?.doctorId?._id,
+        paymentMethod: "orangeMoney",
+        amountPaid:
+          confirmationData?.appointmentData?.doctorId?.consultationFee,
+        userId: confirmationData?.appointmentData?.userId,
+        accountName: "orangeMoney",
+        accountNo: accountNumber,
+        customerMsisdn: "72906251",
+        actionType: "consultation",
+      };
+    } else if (isClinic === true) {
+      payload = {
+        appointmentId: confirmationData.appointmentData?._id,
+        paymentMethod: "orangeMoney",
+        userId: confirmationData?.appointmentData?.userId,
+        clinicDoctorId: confirmationData?.appointmentData?.clinicDoctorId?._id,
+        clinicId: confirmationData?.appointmentData?.clinicId?._id,
+        accountName: "orangeMoney",
+        accountNo: accountNumber,
+        customerMsisdn: "72906251",
+        amountPaid:
+          confirmationData?.appointmentData?.clinicDoctorId?.consultationFee,
+        actionType: "consultation",
+      };
+    }
     try {
       const response = await claimFeeWithOrangeMoney({
         body: payload,
