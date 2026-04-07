@@ -44,6 +44,9 @@ import PaymentMethod from "./UserAndPatient/FindDoctors/PaymentMethod";
 import ClinicDoctorDetails from "./UserAndPatient/NearbyClinics&Hospitals/ClinicDoctorDetails";
 import ClinicDoctorAppointment from "./UserAndPatient/NearbyClinics&Hospitals/ClinicDoctorAppointment";
 import ClinicPatientDetails from "./UserAndPatient/NearbyClinics&Hospitals/ClinicPatientDetails";
+import ClinicPackages from "./Clinic/ClinicPackages/Index";
+import ClinicAddPackage from "./Clinic/ClinicPackages/AddPackage";
+import ClinicEditPackage from "./Clinic/ClinicPackages/EditPackage";
 const WEB_PAGES = {
   SIGN_IN: Login,
   REGISTER: Register,
@@ -91,5 +94,8 @@ const WEB_PAGES = {
   CLINIC_DOCTOR_DETAILS: ClinicDoctorDetails,
   CLINIC_DOCTOR_APPOINTMENT: ClinicDoctorAppointment,
   CLINIC_PATIENT_DETAILS: ClinicPatientDetails,
+  CLINIC_PACKAGES: ClinicPackages,
+  CLINIC_ADD_PACKAGE: ClinicAddPackage,
+  CLINIC_EDIT_PACKAGE: ClinicEditPackage,
 };
 export { WEB_PAGES };
