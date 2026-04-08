@@ -54,6 +54,9 @@ const PATH = {
   CLINIC_PACKAGES: "/clinic-packages",
   CLINIC_ADD_PACKAGE: "/clinic-add-package",
   CLINIC_EDIT_PACKAGE: "/clinic-edit-package",
+  CLINIC_SERVICES: "/services",
+  CLINIC_ADD_NEW_SERVICE: "/clinic-add-new-service",
+  CLINIC_EDIT_SERVICE: "/clinic-edit-service",
 };
 
 const TOASTER_STYLING_VALUES = {

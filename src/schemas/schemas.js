@@ -1,5 +1,14 @@
 import * as Yup from "yup";
 
+export const serviceSchema = Yup.object({
+  serviceHeading: Yup.string(),
+  serviceName: Yup.string().required("Service name is required"),
+  service: Yup.string().required("Service description is required"),
+  fee: Yup.string()
+    .matches(/^[0-9,]+$/, "Enter a valid fee amount")
+    .required("Fee is required"),
+});
+
 export const addPackageSchema = Yup.object({
   title: Yup.string().required("Package title is required"),
   fee: Yup.string()

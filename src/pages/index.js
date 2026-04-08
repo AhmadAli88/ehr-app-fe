@@ -1,19 +1,19 @@
-import ForgotPassword from "./Authentication/ForgotPassword"; 
-import Login from "./Authentication/Login";  
-import Register from "./Authentication/Register"; 
-import Otp from "./Authentication/Otp"; 
-import ResetPassword from "./Authentication/ResetPassword"; 
+import ForgotPassword from "./Authentication/ForgotPassword";
+import Login from "./Authentication/Login";
+import Register from "./Authentication/Register";
+import Otp from "./Authentication/Otp";
+import ResetPassword from "./Authentication/ResetPassword";
 import UserAndPatientDashboard from "./UserAndPatient/UserAndPatientDashboard";
 import FindDoctors from "./UserAndPatient/FindDoctors";
-import PatientDetails from "./UserAndPatient/FindDoctors/PatientDetails"; 
+import PatientDetails from "./UserAndPatient/FindDoctors/PatientDetails";
 import DoctorDetailsPage from "./UserAndPatient/FindDoctors/DoctorDetails";
 import DoctorBookingAppointment from "./UserAndPatient/FindDoctors/DoctorBookingpointment";
 import NearbyClinicsAndHospitals from "./UserAndPatient/NearbyClinics&Hospitals/MainPage";
 import HealthCenterDetails from "./UserAndPatient/NearbyClinics&Hospitals/HealthCenterDetails";
 import LaboratoriesAndDiagnostics from "./UserAndPatient/LaboratoriesAndDiagnostics/MainPage";
-import ClinicCenterDetails from "./UserAndPatient/LaboratoriesAndDiagnostics/ClinicCenterDetails"; 
+import ClinicCenterDetails from "./UserAndPatient/LaboratoriesAndDiagnostics/ClinicCenterDetails";
 import MyBookings from "./UserAndPatient/MyBookings/MyBookingPage";
-import CallScreenPage from "./UserAndPatient/MyBookings/CallScreen"; 
+import CallScreenPage from "./UserAndPatient/MyBookings/CallScreen";
 import ConsultationEnded from "./UserAndPatient/MyBookings/ConsultationEnded";
 import DoctorAppointmentDetails from "./UserAndPatient/MyBookings/DoctorAppointmentDetails";
 import MedicalRecords from "./UserAndPatient/MedicalRecords";
@@ -26,7 +26,7 @@ import FavoritesPage from "./UserAndPatient/Settings/FavoritesPage";
 import MedicalPrescriptions from "./UserAndPatient/Settings/MedicalPrescriptions";
 import PaymentHistory from "./UserAndPatient/Settings/PaymentHistory";
 import HelpSupport from "./UserAndPatient/Settings/HelpSupport";
-import DoctorDashboard from "./Doctor/DoctorDashboard"; 
+import DoctorDashboard from "./Doctor/DoctorDashboard";
 import AppointmentsPage from "./Doctor/Appointments";
 import DoctorMessages from "./Doctor/DoctorMessages";
 import SubscriptionPage from "./Doctor/SubscriptionPage";
@@ -47,6 +47,9 @@ import ClinicPatientDetails from "./UserAndPatient/NearbyClinics&Hospitals/Clini
 import ClinicPackages from "./Clinic/ClinicPackages/Index";
 import ClinicAddPackage from "./Clinic/ClinicPackages/AddPackage";
 import ClinicEditPackage from "./Clinic/ClinicPackages/EditPackage";
+import ClinicServices from "./Clinic/Services/Index";
+import AddNewService from "./Clinic/Services/AddNewService";
+import EditNewService from "./Clinic/Services/EditNewService";
 const WEB_PAGES = {
   SIGN_IN: Login,
   REGISTER: Register,
@@ -97,5 +100,8 @@ const WEB_PAGES = {
   CLINIC_PACKAGES: ClinicPackages,
   CLINIC_ADD_PACKAGE: ClinicAddPackage,
   CLINIC_EDIT_PACKAGE: ClinicEditPackage,
+  CLINIC_SERVICES: ClinicServices,
+  CLINIC_ADD_NEW_SERVICE: AddNewService,
+  CLINIC_EDIT_SERVICE: EditNewService,
 };
 export { WEB_PAGES };
