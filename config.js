@@ -57,6 +57,9 @@ const PATH = {
   CLINIC_SERVICES: "/services",
   CLINIC_ADD_NEW_SERVICE: "/clinic-add-new-service",
   CLINIC_EDIT_SERVICE: "/clinic-edit-service",
+  LABORATORIES_TEST: "/laboratories-test",
+  LABORATORIES_TEST_ADD: "/laboratories-test-add",
+  LABORATORIES_TEST_EDIT: "/laboratories-test-edit",
 };
 
 const TOASTER_STYLING_VALUES = {

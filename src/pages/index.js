@@ -50,6 +50,9 @@ import ClinicEditPackage from "./Clinic/ClinicPackages/EditPackage";
 import ClinicServices from "./Clinic/Services/Index";
 import AddNewService from "./Clinic/Services/AddNewService";
 import EditNewService from "./Clinic/Services/EditNewService";
+import LaboratoriesTest from "./Clinic/LaboratoriesTest/LaboratoriesTest";
+import AddNewLabTest from "./Clinic/LaboratoriesTest/AddNewLabTest";
+import EditLabTest from "./Clinic/LaboratoriesTest/EditLabTest";
 const WEB_PAGES = {
   SIGN_IN: Login,
   REGISTER: Register,
@@ -103,5 +106,8 @@ const WEB_PAGES = {
   CLINIC_SERVICES: ClinicServices,
   CLINIC_ADD_NEW_SERVICE: AddNewService,
   CLINIC_EDIT_SERVICE: EditNewService,
+  LABORATORIES_TEST: LaboratoriesTest,
+  LABORATORIES_TEST_ADD: AddNewLabTest,
+  LABORATORIES_TEST_EDIT: EditLabTest,
 };
 export { WEB_PAGES };

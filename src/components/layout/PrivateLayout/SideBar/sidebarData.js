@@ -40,6 +40,7 @@ export const sidebarMenus = {
     { label: "Clinic Members", icon: FiUsers, to: "/clinic-members" },
     { label: "Packages", icon: FiPackage, to: "/clinic-packages" },
     { label: "Services", icon: FiList, to: "/services" },
+    { label: "Laboratories Test", icon: FiActivity, to: "/laboratories-test" },
     { label: "Messages", icon: FiMessageCircle, to: "/clinic-message" },
     { label: "Subscription", icon: FiZap, to: "/clinic-subscription" },
     { label: "Settings", icon: FiSettings, to: "/clinic-settings" },

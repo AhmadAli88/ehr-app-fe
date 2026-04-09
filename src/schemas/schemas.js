@@ -9,6 +9,14 @@ export const serviceSchema = Yup.object({
     .required("Fee is required"),
 });
 
+export const labTestSchema = Yup.object({
+  serviceHeading: Yup.string(),
+  testName: Yup.string().required("Test name is required"),
+  fee: Yup.string()
+    .matches(/^[0-9,]+$/, "Enter a valid fee amount")
+    .required("Fee is required"),
+});
+
 export const addPackageSchema = Yup.object({
   title: Yup.string().required("Package title is required"),
   fee: Yup.string()
