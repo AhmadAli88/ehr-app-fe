@@ -51,6 +51,15 @@ const PATH = {
   CLINIC_DOCTOR_DETAILS: "/clinic-doctor-details",
   CLINIC_DOCTOR_APPOINTMENT: "/clinic-doctor-appointment",
   CLINIC_PATIENT_DETAILS: "/clinic-patient-details",
+  CLINIC_PACKAGES: "/clinic-packages",
+  CLINIC_ADD_PACKAGE: "/clinic-add-package",
+  CLINIC_EDIT_PACKAGE: "/clinic-edit-package",
+  CLINIC_SERVICES: "/services",
+  CLINIC_ADD_NEW_SERVICE: "/clinic-add-new-service",
+  CLINIC_EDIT_SERVICE: "/clinic-edit-service",
+  LABORATORIES_TEST: "/laboratories-test",
+  LABORATORIES_TEST_ADD: "/laboratories-test-add",
+  LABORATORIES_TEST_EDIT: "/laboratories-test-edit",
 };
 
 const TOASTER_STYLING_VALUES = {
